@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<AppConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <m_ID>INTIME</m_ID>
+  <ReceiverConfig>
+    <TCPConfiguration>
+      <Attempts>10</Attempts>
+      <ReConnectOnDisconnect>true</ReConnectOnDisconnect>
+      <IntervalBetweenAttempts>1000</IntervalBetweenAttempts>
+      <IPAddress>203.114.240.82</IPAddress>
+      <Port>7013</Port>
+      <UDPPort>8013</UDPPort>
+      <DistributorType>TCPOnly</DistributorType>
+      <ProfileType>TWS</ProfileType>
+      <MulticastIP>239.255.255.255</MulticastIP>
+      <LocaIP>172.31.28.66</LocaIP>
+    </TCPConfiguration>
+    <MSMQConfiguration>
+      <Path>FormatName:DIRECT=TCP:127.0.0.1\private$\broadcast</Path>
+      <MSMQPath2 />
+      <Format>Binary</Format>
+    </MSMQConfiguration>
+    <SharedMemConfiguration>
+      <Path>.\private$\request</Path>
+      <ReadSize>1024</ReadSize>
+    </SharedMemConfiguration>
+    <DatabaseConfiguration>
+      <DBServer>127.0.0.1</DBServer>
+      <Database>DB Name</Database>
+      <UserId>odin</UserId>
+      <Password>odin</Password>
+      <TimeOut>180</TimeOut>
+      <BhavCopyProcedure>stp_GetBhavCopy</BhavCopyProcedure>
+      <OMSSessionsConfigProcedure>stp_GetOMSClientConfiguration</OMSSessionsConfigProcedure>
+      <RemoteAppDetailsProc>stp_GetRemoteAppDetails</RemoteAppDetailsProc>
+      <InstrumentsProcedure>stp_GetInstrumentID</InstrumentsProcedure>
+      <TimeGroupConfigProcedure>stp_GetTimeGroupConfiguration</TimeGroupConfigProcedure>
+      <SegmentId>1,2,4,8,16,32,64,128,256,257,1024,1025,2048,2049,512,513,4096,8192,8193,16384,16385,32768,32769,65536,65537,131072,131073,262144,262145,2097152,524288,1048576,8388608,8388609,536870912,67108864,134217728,268435456,268435457</SegmentId>
+    </DatabaseConfiguration>
+    <SimulationConfig>
+      <FieldNames>
+        <string>OpenPrice</string>
+        <string>ClosePrice</string>
+      </FieldNames>
+      <AssemblyName>Packets</AssemblyName>
+      <TypeName>FTIL.MCX.FeedManager.Packets.TagBcastMBOOrMBPNew</TypeName>
+      <DataFile>data.txt</DataFile>
+    </SimulationConfig>
+    <OMSConfigurations />
+    <TBTConnectionList />
+  </ReceiverConfig>
+  <OMSVersion>10.0.1.0</OMSVersion>
+  <StoreConfig>
+    <TypeOfPacking>true</TypeOfPacking>
+  </StoreConfig>
+  <DistributionConfig>
+    <TCPEnableQueueCounters>false</TCPEnableQueueCounters>
+    <TCPCompletionQueuePriorityCount>100</TCPCompletionQueuePriorityCount>
+    <UDPEnableQueueCounters>false</UDPEnableQueueCounters>
+    <UDPCompletionQueuePriorityCount>100</UDPCompletionQueuePriorityCount>
+    <MSMQConfiguration>
+      <Path>FormatName:DIRECT=TCP:127.0.0.1\private$\queryrequest</Path>
+      <Format>Binary</Format>
+    </MSMQConfiguration>
+    <TCPLocalIp>172.31.28.66</TCPLocalIp>
+    <TCPLocalPort>6111</TCPLocalPort>
+    <TCPIPToNotifyOMS>203.114.240.82</TCPIPToNotifyOMS>
+    <TCPPortToNotifyOMS>7777</TCPPortToNotifyOMS>
+    <TCPMaxAllowedSubscribers>1000</TCPMaxAllowedSubscribers>
+    <TCPSocketConnectionsBacklog>100</TCPSocketConnectionsBacklog>
+    <TCPCompressData>false</TCPCompressData>
+    <TCPMaxClientsToProcess>2000</TCPMaxClientsToProcess>
+    <TCPClientQueueSize>5</TCPClientQueueSize>
+    <TCPMinClientPacketWaitCount>1</TCPMinClientPacketWaitCount>
+    <TCPMinClientQueueWaitSize>1024</TCPMinClientQueueWaitSize>
+    <TCPMinClientTimeWaitInterval>2</TCPMinClientTimeWaitInterval>
+    <TCPMinDataReceiveSize>1024</TCPMinDataReceiveSize>
+    <TCPMaxDataSendSize>512</TCPMaxDataSendSize>
+    <PoolSize>1000</PoolSize>
+    <TCPInfoQueuePriority>1</TCPInfoQueuePriority>
+    <DistributorType>TCPOnly</DistributorType>
+    <UDPReservedPacketType>MBOMBP</UDPReservedPacketType>
+    <TCPFeedHandlerMaxClientRequesttoProcess>5000</TCPFeedHandlerMaxClientRequesttoProcess>
+    <TCPFeedHandlerMaxClientsReplytoProcess>2000</TCPFeedHandlerMaxClientsReplytoProcess>
+    <TCPFeedHandlerMaxClientReplyDequeueCount>5</TCPFeedHandlerMaxClientReplyDequeueCount>
+    <MaxAllowedNewsRequest>2000</MaxAllowedNewsRequest>
+    <MaxAllowedBestFiveRequest>5000</MaxAllowedBestFiveRequest>
+    <MaxAllowedNewBestFiveRequest>2000</MaxAllowedNewBestFiveRequest>
+    <UDPClientQueueSize>18</UDPClientQueueSize>
+    <UDPMaxDataSendSize>8192</UDPMaxDataSendSize>
+    <UDPMinClientPacketWaitCount>16</UDPMinClientPacketWaitCount>
+    <UDPMinClientQueueWaitSize>2048</UDPMinClientQueueWaitSize>
+    <UDPMinClientTimeWaitInterval>30</UDPMinClientTimeWaitInterval>
+    <UDPCompressData>false</UDPCompressData>
+    <UDPInfoQueuePriority>1</UDPInfoQueuePriority>
+    <UDPConnectionProfileList>
+      <anyType xsi:type="UDPConnectionProfile">
+        <ProfileType>TWS</ProfileType>
+        <ProfileName>UDP1</ProfileName>
+        <ProfileID>10000000</ProfileID>
+        <SegmentId>
+          <anyType xsi:type="xsd:int">1</anyType>
+          <anyType xsi:type="xsd:int">2</anyType>
+          <anyType xsi:type="xsd:int">8</anyType>
+          <anyType xsi:type="xsd:int">16</anyType>
+          <anyType xsi:type="xsd:int">32</anyType>
+          <anyType xsi:type="xsd:int">64</anyType>
+          <anyType xsi:type="xsd:int">1024</anyType>
+          <anyType xsi:type="xsd:int">512</anyType>
+          <anyType xsi:type="xsd:int">4096</anyType>
+          <anyType xsi:type="xsd:int">8192</anyType>
+          <anyType xsi:type="xsd:int">16384</anyType>
+          <anyType xsi:type="xsd:int">128</anyType>
+          <anyType xsi:type="xsd:int">4</anyType>
+          <anyType xsi:type="xsd:int">256</anyType>
+          <anyType xsi:type="xsd:int">257</anyType>
+          <anyType xsi:type="xsd:int">2048</anyType>
+          <anyType xsi:type="xsd:int">513</anyType>
+          <anyType xsi:type="xsd:int">8193</anyType>
+          <anyType xsi:type="xsd:int">16385</anyType>
+          <anyType xsi:type="xsd:int">1025</anyType>
+          <anyType xsi:type="xsd:int">2049</anyType>
+          <anyType xsi:type="xsd:int">32768</anyType>
+          <anyType xsi:type="xsd:int">32769</anyType>
+          <anyType xsi:type="xsd:int">65536</anyType>
+          <anyType xsi:type="xsd:int">65537</anyType>
+          <anyType xsi:type="xsd:int">131072</anyType>
+          <anyType xsi:type="xsd:int">131073</anyType>
+          <anyType xsi:type="xsd:int">262144</anyType>
+          <anyType xsi:type="xsd:int">262145</anyType>
+          <anyType xsi:type="xsd:int">2097152</anyType>
+          <anyType xsi:type="xsd:int">524288</anyType>
+          <anyType xsi:type="xsd:int">1048576</anyType>
+          <anyType xsi:type="xsd:int">8388608</anyType>
+          <anyType xsi:type="xsd:int">8388609</anyType>
+          <anyType xsi:type="xsd:int">536870912</anyType>
+          <anyType xsi:type="xsd:int">67108864</anyType>
+          <anyType xsi:type="xsd:int">134217728</anyType>
+          <anyType xsi:type="xsd:int">268435456</anyType>
+          <anyType xsi:type="xsd:int">268435457</anyType>
+        </SegmentId>
+        <RemoteAddress>192.168.15.2</RemoteAddress>
+        <RemotePort>8013</RemotePort>
+        <LocalAddress>0.0.0.0</LocalAddress>
+        <MulticastGroup>239.255.255.255</MulticastGroup>
+      </anyType>
+    </UDPConnectionProfileList>
+    <MSMQFeedHandlerList />
+  </DistributionConfig>
+  <Mode>SBS</Mode>
+  <SegmentFuturesOption>0</SegmentFuturesOption>
+  <SegmentSpot>0</SegmentSpot>
+  <SegmentOthers>0</SegmentOthers>
+  <ID>INTIME</ID>
+  <AppType>0</AppType>
+  <RecoveryConfig>
+    <Path>FormatName:DIRECT=TCP:127.0.0.1\private$\broadcast</Path>
+    <Format>Binary</Format>
+  </RecoveryConfig>
+</AppConfig>
